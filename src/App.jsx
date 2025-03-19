@@ -3,10 +3,12 @@ import {
   DivImagem,
   Form,
   Tittle,
-  DivInputs,
+  ListaInputs,
   Input,
+  ListaItem,
   Label,
-  Button
+  Span,
+  Button,
 } from "./assets/styles.js";
 
 function Home() {
@@ -16,20 +18,48 @@ function Home() {
         <DivImagem>
           <img />
         </DivImagem>
-
         <Form>
           <Tittle>Cadastro de Usuário</Tittle>
-          <DivInputs>
+          <ListaInputs>
             <div>
-              <Label for="nome"> Nome do usuário</Label>
-              <Input type="text" id="nome"></Input>
-              <Label for="idade"> Idade</Label>
-              <Input type="text" id="idade"></Input>
+              <ListaItem>
+                <Label for="nome">
+                  {" "}
+                  Nome do usuário <Span>*</Span>{" "}
+                </Label>
+                <Input
+                  type="text"
+                  id="nome"
+                  placeholder="Nome do usuário"
+                ></Input>
+              </ListaItem>
+              <ListaItem>
+                <Label for="idade">
+                  {" "}
+                  Idade <Span>*</Span>
+                </Label>
+                <Input
+                  type="number"
+                  id="idade"
+                  placeholder="Idadade do usuário"
+                ></Input>
+              </ListaItem>
             </div>
-            <Label for="email"> Digite seu e-mail</Label>
-            <Input type="email" id="email"></Input>
-          </DivInputs>
-          <Button>Cadastrar</Button>
+            <div>
+              <ListaItem>
+                <Label for="email">
+                  {" "}
+                  Digite seu e-mail <Span>*</Span>
+                </Label>
+                <Input
+                  type="email"
+                  id="email"
+                  placeholder="E-mail do usuário"
+                ></Input>
+              </ListaItem>
+            </div>
+          </ListaInputs>
+          <Button type="submit">Cadastrar</Button>
         </Form>
       </Main>
     </>
