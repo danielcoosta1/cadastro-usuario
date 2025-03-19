@@ -10,7 +10,6 @@ import {
   Input,
   ListaItem,
   Label,
-  Span,
   Button,
 } from "./styles.js";
 
@@ -21,16 +20,16 @@ function Home() {
     <>
       <Main>
         <DivImagem>
-          <Img src={UsersImage} alt="Imagem de fundo - usuários"/>
+          <Img src={UsersImage} alt="Imagem de fundo - usuários" />
         </DivImagem>
         <Form>
           <Tittle>Cadastro de Usuário</Tittle>
           <ListaInputs>
             <DivLinha1>
-              <ListaItem> 
+              <ListaItem>
                 <Label for="nome">
                   {" "}
-                  Nome do usuário <Span>*</Span>{" "}
+                  Nome do usuário <span>*</span>
                 </Label>
                 <Input
                   type="text"
@@ -41,7 +40,7 @@ function Home() {
               <ListaItem>
                 <Label for="idade">
                   {" "}
-                  Idade <Span>*</Span>
+                  Idade<span>*</span>
                 </Label>
                 <Input
                   type="number"
@@ -54,7 +53,7 @@ function Home() {
               <ListaItem>
                 <Label for="email">
                   {" "}
-                  Digite seu e-mail <Span>*</Span>
+                  Digite seu e-mail <span>*</span>
                 </Label>
                 <Input
                   type="email"

@@ -17,9 +17,12 @@ const DivImagem = styled.div`
   background: linear-gradient(to right, #fe7e5d, #7f3841);
 
   margin: 5rem auto;
-  
+
   height: 30%;
+  width: 50%;
   max-width: 75rem;
+  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,9 +50,9 @@ const Form = styled.form`
 `;
 
 const Tittle = styled.h1`
-    color: #fff;
-    font-size: 2.5rem;
-    font-weight: 600;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 600;
 `;
 
 const ListaInputs = styled.ul`
@@ -67,21 +70,51 @@ const DivLinha2 = styled.div``;
 const ListaItem = styled.li`
   display: flex;
   flex-direction: column;
-   
 `;
 
-const Label = styled.label``;
+const Label = styled.label`
+  color: #A9A9A9;
+  font-size: 0.7rem;
+  margin-bottom: 0.25rem;
+  margin-left: 0.25rem;
 
-const Span = styled.span`
-  color: red;
+  span {
+    color: #ef4f45;
+    font-weight: bold;
+  }
 `;
+
+// const Span = styled.span`
+//   color: red;
+// `;
 
 const Input = styled.input`
-border-radius: 10px;
-border: 1px solid 
+  border-radius: 10px;
+  border: 1px solid #d2dae2;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  outline: none;
 `;
 
-const Button = styled.button``;
+const Button = styled.button`
+    border: none;
+    background: linear-gradient(180deg, #FE7E5D 0%, #FF6378 100%);
+    font-size: 1rem;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 60%;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+
+`;
 
 // BUTTON -
 
@@ -97,6 +130,5 @@ export {
   Label,
   Input,
   ListaItem,
-  Span,
   Button,
 };
