@@ -21,13 +21,13 @@ function Home() {
     <>
       <Main>
         <DivImagem>
-          <Img src={UsersImage}/>
+          <Img src={UsersImage} alt="Imagem de fundo - usuários"/>
         </DivImagem>
         <Form>
           <Tittle>Cadastro de Usuário</Tittle>
           <ListaInputs>
             <DivLinha1>
-              <ListaItem>
+              <ListaItem> 
                 <Label for="nome">
                   {" "}
                   Nome do usuário <Span>*</Span>{" "}
