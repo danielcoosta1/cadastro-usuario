@@ -1,27 +1,32 @@
 import {
   Main,
   DivImagem,
+  Img,
   Form,
   Tittle,
   ListaInputs,
+  DivLinha1,
+  DivLinha2,
   Input,
   ListaItem,
   Label,
   Span,
   Button,
-} from "./assets/styles.js";
+} from "./styles.js";
+
+import UsersImage from "../assets/users.png";
 
 function Home() {
   return (
     <>
       <Main>
         <DivImagem>
-          <img />
+          <Img src={UsersImage}/>
         </DivImagem>
         <Form>
           <Tittle>Cadastro de Usuário</Tittle>
           <ListaInputs>
-            <div>
+            <DivLinha1>
               <ListaItem>
                 <Label for="nome">
                   {" "}
@@ -44,8 +49,8 @@ function Home() {
                   placeholder="Idadade do usuário"
                 ></Input>
               </ListaItem>
-            </div>
-            <div>
+            </DivLinha1>
+            <DivLinha2>
               <ListaItem>
                 <Label for="email">
                   {" "}
@@ -57,7 +62,7 @@ function Home() {
                   placeholder="E-mail do usuário"
                 ></Input>
               </ListaItem>
-            </div>
+            </DivLinha2>
           </ListaInputs>
           <Button type="submit">Cadastrar</Button>
         </Form>
