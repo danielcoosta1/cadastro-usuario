@@ -19,19 +19,17 @@ import {
 import UsersImage from "../../assets/users.png";
 
 function Home() {
-
   const inputName = useRef();
   const inputAge = useRef();
   const inputEmail = useRef();
 
-  async function cadastrarNovoUsuario(){
-
-   const data = await api.post('/users', {
-    name: inputEmail.current.value,
-    age: parseInt(inputAge.current.value),
-    email: inputEmail.current.value
-    })
-  console.log(data)
+  async function cadastrarNovoUsuario() {
+    const data = await api.post("/users", {
+      name: inputEmail.current.value,
+      age: parseInt(inputAge.current.value),
+      email: inputEmail.current.value,
+    });
+    console.log(data);
   }
 
   return (
@@ -84,11 +82,13 @@ function Home() {
               </ListaItem>
             </DivLinha2>
           </ListaInputs>
-          <Button type="button" onClick={cadastrarNovoUsuario}>Cadastrar Usuário</Button>
+          <Button type="button" onClick={cadastrarNovoUsuario}>
+            Cadastrar Usuário
+          </Button>
         </Form>
       </Main>
     </>
   );
 }
 
-export default Home
+export default Home;
