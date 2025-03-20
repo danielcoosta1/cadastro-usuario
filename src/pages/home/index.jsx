@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 import {
   Main,
   DivImagem,
@@ -16,6 +18,19 @@ import {
 import UsersImage from "../../assets/users.png";
 
 function Home() {
+
+  const inputName = useRef();
+  const inputAge = useRef();
+  const inputEmail = useRef();
+
+
+
+  function cadastrarNovoUsuario(){
+    console.log(inputName.current.value);
+  }
+
+
+
   return (
     <>
       <Main>
@@ -35,6 +50,7 @@ function Home() {
                   type="text"
                   id="nome"
                   placeholder="Nome do usuário"
+                  ref={inputName}
                 ></Input>
               </ListaItem>
               <ListaItem>
@@ -46,6 +62,7 @@ function Home() {
                   type="number"
                   id="idade"
                   placeholder="Idadade do usuário"
+                  ref={inputAge}
                 ></Input>
               </ListaItem>
             </DivLinha1>
@@ -59,11 +76,12 @@ function Home() {
                   type="email"
                   id="email"
                   placeholder="E-mail do usuário"
+                  ref={inputEmail}
                 ></Input>
               </ListaItem>
             </DivLinha2>
           </ListaInputs>
-          <Button type="submit">Cadastrar</Button>
+          <Button type="button" onClick={cadastrarNovoUsuario}>Cadastrar Usuário</Button>
         </Form>
       </Main>
     </>
