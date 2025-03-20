@@ -24,14 +24,15 @@ function Home() {
   const inputAge = useRef();
   const inputEmail = useRef();
 
+  async function cadastrarNovoUsuario(){
 
-
-  function cadastrarNovoUsuario(){
-    
-    console.log(inputName.current.value);
+   await api.post('/users', {
+    name: inputEmail,
+    age: inputAge,
+    email: inputEmail
+    })
+  
   }
-
-
 
   return (
     <>
@@ -44,7 +45,7 @@ function Home() {
           <ListaInputs>
             <DivLinha1>
               <ListaItem>
-                <Label for="nome">
+                <Label htmlFor="nome">
                   {" "}
                   Nome do usuário <span>*</span>
                 </Label>
@@ -56,7 +57,7 @@ function Home() {
                 ></Input>
               </ListaItem>
               <ListaItem>
-                <Label for="idade">
+                <Label htmlFor="idade">
                   {" "}
                   Idade<span>*</span>
                 </Label>
@@ -70,7 +71,7 @@ function Home() {
             </DivLinha1>
             <DivLinha2>
               <ListaItem>
-                <Label for="email">
+                <Label htmlFor="email">
                   {" "}
                   Digite seu e-mail <span>*</span>
                 </Label>
@@ -90,4 +91,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Home
