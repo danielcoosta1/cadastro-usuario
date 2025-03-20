@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import api from "../../services/api.js";
+import ButtonDefault from "../../components/Button/index.jsx";
+
 
 import {
   Main,
@@ -12,8 +14,8 @@ import {
   DivLinha2,
   Input,
   ListaItem,
-  Label,
-  Button,
+  Label
+  
 } from "./styles.js";
 
 import UsersImage from "../../assets/users.png";
@@ -82,9 +84,9 @@ function Home() {
               </ListaItem>
             </DivLinha2>
           </ListaInputs>
-          <Button type="button" onClick={cadastrarNovoUsuario}>
-            Cadastrar Usuário
-          </Button>
+          <ButtonDefault type="button" onClick={cadastrarNovoUsuario}>
+            
+          </ButtonDefault>
         </Form>
       </Main>
     </>
