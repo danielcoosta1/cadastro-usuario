@@ -26,12 +26,12 @@ function Home() {
 
   async function cadastrarNovoUsuario(){
 
-   await api.post('/users', {
-    name: inputEmail,
-    age: inputAge,
-    email: inputEmail
+   const data = await api.post('/users', {
+    name: inputEmail.current.value,
+    age: parseInt(inputAge.current.value),
+    email: inputEmail.current.value
     })
-  
+  console.log(data)
   }
 
   return (
