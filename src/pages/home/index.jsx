@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import api from "../../services/api.js";
 
 import {
   Main,
@@ -26,6 +27,7 @@ function Home() {
 
 
   function cadastrarNovoUsuario(){
+    
     console.log(inputName.current.value);
   }
 
