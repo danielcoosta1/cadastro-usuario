@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import api from "../../services/api.js";
 import ButtonDefault from "../../components/Button/index.jsx";
-
+import TopBackGroundDefault from "../../components/TopBackGround/index.jsx";
 
 import {
   Main,
@@ -37,9 +37,9 @@ function Home() {
   return (
     <>
       <Main>
-        <DivImagem>
+        <TopBackGroundDefault>
           <Img src={UsersImage} alt="Imagem de fundo - usuários" />
-        </DivImagem>
+        </TopBackGroundDefault>
         <Form>
           <Tittle>Cadastro de Usuário</Tittle>
           <ListaInputs>
