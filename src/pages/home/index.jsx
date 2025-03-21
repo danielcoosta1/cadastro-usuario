@@ -5,8 +5,6 @@ import TopBackGroundDefault from "../../components/TopBackGround/index.jsx";
 
 import {
   Main,
-  DivImagem,
-  Img,
   Form,
   Tittle,
   ListaInputs,
@@ -17,8 +15,6 @@ import {
   Label
   
 } from "./styles.js";
-
-import UsersImage from "../../assets/users.png";
 
 function Home() {
   const inputName = useRef();
@@ -37,9 +33,7 @@ function Home() {
   return (
     <>
       <Main>
-        <TopBackGroundDefault>
-          <Img src={UsersImage} alt="Imagem de fundo - usuários" />
-        </TopBackGroundDefault>
+        <TopBackGroundDefault />
         <Form>
           <Tittle>Cadastro de Usuário</Tittle>
           <ListaInputs>

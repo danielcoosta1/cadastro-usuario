@@ -1,8 +1,10 @@
-import { TopBackGround } from "./styles";
+import { TopBackGround, Img } from "./styles";
 
-function TopBackGroundDefault({children,...props}) {
+import UsersImage from "../../assets/users.png";
+
+function TopBackGroundDefault() {
   return (
-      <TopBackGround{...props}>{children}</TopBackGround>
+      <TopBackGround><Img src={UsersImage} alt="Imagem de fundo - usuários" /></TopBackGround>
     
   );
 }

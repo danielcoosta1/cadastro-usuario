@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TopBackGround = styled.div`
+const TopBackGround = styled.div`
   background: linear-gradient(to right, #fe7e5d, #7f3841);
 
   margin: 5rem auto;
@@ -16,3 +16,12 @@ export const TopBackGround = styled.div`
 
   border-radius: 30px;
 `;
+
+
+const Img = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+`;
+
+
+export { Img, TopBackGround };
