@@ -1,10 +1,13 @@
 
-
+//HOOKS
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 //DADOS
 import api from "../../services/api.js";
+
+//MÉTODOS
+import { buscarUsuario } from "../../pages/listUsers/buscarUsuario.js"; 
 
 //ESTILOS
 import ButtonDefault from "../../components/Button/index.jsx";
@@ -40,7 +43,9 @@ function Home() {
       age: parseInt(inputAge.current.value),
       email: inputEmail.current.value,
     });
+    buscarUsuario();
     console.log(data);
+    
   }
 
   return (
