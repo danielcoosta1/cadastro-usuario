@@ -85,7 +85,7 @@ function Home() {
             </DivLinha2>
           </ListaInputs>
           <ButtonDefault type="button" onClick={cadastrarNovoUsuario}>
-            
+            Cadastrar Usuário
           </ButtonDefault>
         </Form>
       </Main>
