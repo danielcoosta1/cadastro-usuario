@@ -1,5 +1,12 @@
+
+
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+
+//DADOS
 import api from "../../services/api.js";
+
+//ESTILOS
 import ButtonDefault from "../../components/Button/index.jsx";
 import TopBackGroundDefault from "../../components/TopBackGround/index.jsx";
 
@@ -16,10 +23,16 @@ import {
   
 } from "./styles.js";
 
+
+//PÁGINA
 function Home() {
   const inputName = useRef();
   const inputAge = useRef();
   const inputEmail = useRef();
+
+  const navigate = useNavigate();
+
+
 
   async function cadastrarNovoUsuario() {
     const data = await api.post("/users", {
@@ -81,7 +94,7 @@ function Home() {
           <ButtonDefault type="button" onClick={cadastrarNovoUsuario} theme="primary">
             Cadastrar Usuário
           </ButtonDefault>
-          <ButtonDefault type="button">
+          <ButtonDefault type="button" onClick={() => navigate("/lista-de-usuarios")}>
             Lista de Usuários
           </ButtonDefault>
         </Form>
