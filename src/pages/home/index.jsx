@@ -1,4 +1,3 @@
-
 //HOOKS
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import api from "../../services/api.js";
 
 //MÉTODOS
-import { buscarUsuario } from "../../pages/listUsers/buscarUsuario.js"; 
+import { buscarUsuario } from "../../pages/listUsers/buscarUsuario.js";
 
 //ESTILOS
 import ButtonDefault from "../../components/Button/index.jsx";
@@ -22,10 +21,8 @@ import {
   DivLinha2,
   Input,
   ListaItem,
-  Label
-  
+  Label,
 } from "./styles.js";
-
 
 //PÁGINA
 function Home() {
@@ -35,17 +32,19 @@ function Home() {
 
   const navigate = useNavigate();
 
-
-
   async function cadastrarNovoUsuario() {
-    const data = await api.post("/users", {
-      name: inputEmail.current.value,
-      age: parseInt(inputAge.current.value),
-      email: inputEmail.current.value,
-    });
-    buscarUsuario();
-    console.log(data);
-    
+    try {
+      const data = await api.post("/users", {
+        name: inputEmail.current.value,
+        age: parseInt(inputAge.current.value),
+        email: inputEmail.current.value,
+      });
+      buscarUsuario();
+      console.log(data);
+    } catch (error) {
+      console.error("Erro ao cadastrar usuário", error);
+      throw error;
+    }
   }
 
   return (
@@ -96,10 +95,17 @@ function Home() {
               </ListaItem>
             </DivLinha2>
           </ListaInputs>
-          <ButtonDefault type="button" onClick={cadastrarNovoUsuario} theme="primary">
+          <ButtonDefault
+            type="button"
+            onClick={cadastrarNovoUsuario}
+            theme="primary"
+          >
             Cadastrar Usuário
           </ButtonDefault>
-          <ButtonDefault type="button" onClick={() => navigate("/lista-de-usuarios")}>
+          <ButtonDefault
+            type="button"
+            onClick={() => navigate("/lista-de-usuarios")}
+          >
             Lista de Usuários
           </ButtonDefault>
         </Form>
