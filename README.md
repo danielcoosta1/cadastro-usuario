@@ -17,7 +17,7 @@
 
 <p>
 :heavy_check_mark: Uso de um servidor NodeJS, criado anteriormente por mim, com as rotas GET, POST e DEL  através da ferramenta PRISMA</br>
-:heavy_check_mark: Uso da ferramenta VITE</br>
+:heavy_check_mark: Uso da ferramenta VITE para criar o ambiente de desenvolvimento do projeto</br>
 :heavy_check_mark: Uso da ferramenta AXIO, para receber dados de uma API(Servidor NodeJS)</br>
 :heavy_check_mark: Uso da ferramenta Router, do React-Router-Dom, para navegar entre as páginas </br>
 :heavy_check_mark: Uso da ferramenta CSS - Styled Components para estilizar as páginas</br>
