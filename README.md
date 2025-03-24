@@ -29,14 +29,14 @@
 <h2> :art:  Projeto</h2>
 
 <p>:arrow_right: Página de Cadastro de Usuário:</p>
-<p>Digita-se os inputs e ao clicar no botão "Cadastrar Usuário" chama-se uma função assincróna que retorna o resultado do cadastro e atualiza os dados que ficam na Lista de Usuários <\br></p>
+<p>Digita-se os inputs e ao clicar no botão "Cadastrar Usuário" chama-se uma função assincróna que retorna o resultado do cadastro e atualiza os dados que ficam na Lista de Usuários </p>
 
-<img src="https://github.com/danielcoosta1/cadastro-usuario/blob/develop/src/assets/exemplo3_readme.PNG?raw=true"><\br>
+<img src="https://github.com/danielcoosta1/cadastro-usuario/blob/develop/src/assets/exemplo3_readme.PNG?raw=true">
 
 <p>:arrow_right: Página de Lista de Usuários</p>
 <p>Com possibilidade de excluir o usuário ao clicar na imagem do lixo, ao lado da descrição do usuário</p>
 
-<img src="https://github.com/danielcoosta1/cadastro-usuario/blob/develop/src/assets/exemplo2_readme.PNG?raw=true"><\br>
+<img src="https://github.com/danielcoosta1/cadastro-usuario/blob/develop/src/assets/exemplo2_readme.PNG?raw=true">
 
 
 
