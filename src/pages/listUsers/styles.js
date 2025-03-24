@@ -14,7 +14,7 @@ const Main = styled.main`
 const Container = styled.section`
   margin: 0 auto;
   max-width: 75rem;
-  height: 50%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -26,15 +26,17 @@ const Container = styled.section`
 const ContainerLista = styled.div`
   margin: 0 auto;
   max-width: 75rem;
-  max-height: 70%;
+  height: 90%;
 `;
 
 const Lista = styled.ul`
   display: flex;
   flex-wrap: wrap;
+
   height: 100%;
   width: 100%;
   gap: 1rem;
+ 
 `;
 
 const ListaItem = styled.li`
@@ -45,12 +47,13 @@ const ListaItem = styled.li`
   background-color: #252d48;
   border-radius: 32px;
   padding: 1rem;
-  width: 30%;
-  height: 50%;
+  min-width: 20%;
+  height: 40%;
+  
 `;
 
 const Avatar = styled.img`
-  width: 100px;
+  width: 90px;
 `;
 
 const DivImagem = styled.div`
@@ -68,12 +71,13 @@ const Trash = styled.img`
         transform: scale(0.9);
     }
 
-    
+
 `;
 
 const ContainerDescricao = styled.div`
   color: #d3d3d3;
   width: 70%;
+  font-size: .75rem;
 `;
 
 export {
