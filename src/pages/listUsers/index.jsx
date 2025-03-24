@@ -1,6 +1,7 @@
 import ButtonDefault from "../../components/Button";
 import TopBackGroundDefault from "../../components/TopBackGround";
 import { buscarUsuario } from "./buscarUsuario";
+import { deletarUsuario } from "./deletarUsuario";
 
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -28,6 +29,14 @@ function ListUsers() {
     buscarUsuario().then(setUsuario).catch(console.error);
   }, []);
 
+
+  const handleDelete = async (id) => {
+    await deletarUsuario(id);
+    buscarUsuario().then(setUsuario).catch(console.error);
+  };
+
+
+
   return (
     <>
       <Main>
@@ -48,12 +57,16 @@ function ListUsers() {
                     <p>{usuario.email}</p>
                     <p>{usuario.age}</p>
                   </ContainerDescricao>
-                  <Trash src={trash} />
+                  <Trash src={trash} onClick={()=> handleDelete(usuario.id)} />
                 </ListaItem>
               ))}
             </Lista>
           </ContainerLista>
-          <ButtonDefault type="button" style={{ width: "20%" }} onClick={() => navigate("/")}>
+          <ButtonDefault
+            type="button"
+            style={{ width: "30%" }}
+            onClick={() => navigate("/")}
+          >
             Voltar
           </ButtonDefault>
         </Container>
