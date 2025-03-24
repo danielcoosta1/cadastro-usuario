@@ -7,7 +7,7 @@ import api from "../../services/api.js";
 
 //MÉTODOS
 import { buscarUsuario } from "../../pages/listUsers/buscarUsuario.js";
-
+import limparInput from "./limparInput.js";
 //ESTILOS
 import ButtonDefault from "../../components/Button/index.jsx";
 import TopBackGroundDefault from "../../components/TopBackGround/index.jsx";
@@ -35,11 +35,12 @@ function Home() {
   async function cadastrarNovoUsuario() {
     try {
       const data = await api.post("/users", {
-        name: inputEmail.current.value,
+        name: inputName.current.value,
         age: parseInt(inputAge.current.value),
         email: inputEmail.current.value,
       });
       buscarUsuario();
+      limparInput(inputAge, inputEmail, inputName);
       console.log(data);
     } catch (error) {
       console.error("Erro ao cadastrar usuário", error);
