@@ -35,6 +35,7 @@
 
 <p>:arrow_right: Página de Lista de Usuários</p>
 <p>Com possibilidade de excluir o usuário ao clicar na imagem do lixo, ao lado da descrição do usuário</p>
+<p>Botão Voltar, para navegar de volta a página inicial</p>
 
 <img src="https://github.com/danielcoosta1/cadastro-usuario/blob/develop/src/assets/exemplo2_readme.PNG?raw=true">
 
