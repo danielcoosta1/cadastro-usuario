@@ -1,0 +1,77 @@
+import styled from "styled-components";
+
+const Main = styled.main`
+  background-color: #181f36;
+
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const Container = styled.section`
+  margin: 0 auto;
+  max-width: 75rem;
+  height: 50%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  align-items: center;
+`;
+
+const ContainerLista = styled.div`
+  margin: 0 auto;
+  max-width: 75rem;
+  max-height: 70%;
+`;
+
+const Lista = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  gap: 1rem;
+`;
+
+const ListaItem = styled.li`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+    background-color: #252d48;
+  border: 1px solid #d3d3d3;
+  border-radius: 32px;
+  padding: 1rem;
+  width: 30%;
+`;
+
+const Avatar = styled.img`
+  width: 100px;
+`;
+
+const DivImagem = styled.div`
+width: 30%;
+`;
+
+const Trash = styled.img``;
+
+const ContainerDescricao = styled.div`
+  color: #d3d3d3;
+  width: 70%;
+`;
+
+export {
+  Main,
+  Container,
+  ContainerLista,
+  DivImagem,
+  Avatar,
+  Lista,
+  ListaItem,
+  Trash,
+  ContainerDescricao,
+};

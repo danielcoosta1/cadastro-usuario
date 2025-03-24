@@ -21,7 +21,6 @@ const DivImagem = styled.div`
   height: 30%;
   width: 50%;
   max-width: 75rem;
-  
 
   display: flex;
   align-items: center;
@@ -73,7 +72,7 @@ const ListaItem = styled.li`
 `;
 
 const Label = styled.label`
-  color: #A9A9A9;
+  color: #a9a9a9;
   font-size: 0.7rem;
   margin-bottom: 0.25rem;
   margin-left: 0.25rem;
@@ -96,8 +95,6 @@ const Input = styled.input`
   outline: none;
 `;
 
-
-
 // BUTTON -
 
 export {
@@ -111,6 +108,5 @@ export {
   DivLinha2,
   Label,
   Input,
-  ListaItem
-  
+  ListaItem,
 };
