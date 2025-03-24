@@ -41,6 +41,7 @@ function Home() {
       });
       buscarUsuario();
       limparInput(inputAge, inputEmail, inputName);
+      alert("Usario cadastrado com sucesso");
       console.log(data);
     } catch (error) {
       console.error("Erro ao cadastrar usuário", error);

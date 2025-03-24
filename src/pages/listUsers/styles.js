@@ -47,7 +47,7 @@ const ListaItem = styled.li`
   background-color: #252d48;
   border-radius: 32px;
   padding: 1rem;
-  min-width: 20%;
+  max-width: 30%;
   height: 40%;
   
 `;
