@@ -42,11 +42,11 @@ const ListaItem = styled.li`
   align-items: center;
   gap: 1rem;
 
-    background-color: #252d48;
-  border: 1px solid #d3d3d3;
+  background-color: #252d48;
   border-radius: 32px;
   padding: 1rem;
   width: 30%;
+  height: 50%;
 `;
 
 const Avatar = styled.img`
@@ -54,10 +54,22 @@ const Avatar = styled.img`
 `;
 
 const DivImagem = styled.div`
-width: 30%;
+  width: 30%;
 `;
 
-const Trash = styled.img``;
+const Trash = styled.img`
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+
+    
+`;
 
 const ContainerDescricao = styled.div`
   color: #d3d3d3;

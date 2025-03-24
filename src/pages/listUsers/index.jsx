@@ -2,6 +2,7 @@ import ButtonDefault from "../../components/Button";
 import TopBackGroundDefault from "../../components/TopBackGround";
 import { buscarUsuario } from "./buscarUsuario";
 
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import {
@@ -20,6 +21,7 @@ import trash from "../../assets/trash.svg";
 import { Tittle } from "../home/styles";
 
 function ListUsers() {
+  const navigate = useNavigate();
   const [usuario, setUsuario] = useState([]);
 
   useEffect(() => {
@@ -51,7 +53,9 @@ function ListUsers() {
               ))}
             </Lista>
           </ContainerLista>
-          <ButtonDefault>Voltar</ButtonDefault>
+          <ButtonDefault type="button" style={{ width: "20%" }} onClick={() => navigate("/")}>
+            Voltar
+          </ButtonDefault>
         </Container>
       </Main>
     </>
