@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import api from "../../services/api.js";
 
 //MÉTODOS
-import { buscarUsuario } from "../../pages/listUsers/buscarUsuario.js";
+
 import limparInput from "./limparInput.js";
 //ESTILOS
 import ButtonDefault from "../../components/Button/index.jsx";
@@ -33,19 +33,33 @@ function Home() {
   const navigate = useNavigate();
 
   async function cadastrarNovoUsuario() {
+    const nome = inputName.current.value.trim();
+    const email = inputEmail.current.value.trim();
+    const idade = inputAge.current.value.trim();
+
+    if (!nome || !email || !idade) {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+      return;
+    }
+
+    if (isNaN(idade) || parseInt(idade) <= 0) {
+      alert("Por favor, insira uma idade válida.");
+      return;
+    }
+
     try {
       const data = await api.post("/users", {
-        name: inputName.current.value,
-        age: parseInt(inputAge.current.value),
-        email: inputEmail.current.value,
+        name: nome,
+        age: parseInt(idade),
+        email: email,
       });
-      buscarUsuario();
+
       limparInput(inputAge, inputEmail, inputName);
-      alert("Usario cadastrado com sucesso");
+      alert("Usuário cadastrado com sucesso!");
       console.log(data);
     } catch (error) {
       console.error("Erro ao cadastrar usuário", error);
-      throw error;
+      alert("Erro ao cadastrar usuário.");
     }
   }
 
