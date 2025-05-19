@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import api from "../../services/api.js";
 
 //MÉTODOS
-import { buscarUsuario } from "../../pages/listUsers/buscarUsuario.js";
+
 import limparInput from "./limparInput.js";
 //ESTILOS
 import ButtonDefault from "../../components/Button/index.jsx";
