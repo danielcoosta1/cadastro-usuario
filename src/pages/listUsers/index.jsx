@@ -16,10 +16,11 @@ import {
   Lista,
   ListaItem,
   ContainerDescricao,
+  Titulo,
 } from "./styles";
 
 import trash from "../../assets/trash.svg";
-import { Tittle } from "../home/styles";
+
 
 function ListUsers() {
   const navigate = useNavigate();
@@ -45,50 +46,45 @@ function ListUsers() {
   };
 
   return (
-    <>
-      <Main>
-        <TopBackGroundDefault />
-        <Container>
-          <Tittle>Listagem de Usuário</Tittle>
-          <ContainerLista>
-            {carregando ? (
-              <p>Carregando usuários...</p>
-            ) : usuario.length === 0 ? (
-              <p>Nenhum usuário cadastrado.</p>
-            ) : (
-              <Lista>
-                {usuario.map((usuario) => (
-                  <ListaItem key={usuario.id}>
-                    <DivImagem>
-                      <Avatar
-                        src={`https://avatar.iran.liara.run/public/?username=${usuario.id}`}
-                      />
-                    </DivImagem>
-                    <ContainerDescricao>
-                      <h2>{usuario.name}</h2>
-                      <p>{usuario.email}</p>
-                      <p>{usuario.age}</p>
-                    </ContainerDescricao>
-                    <Trash
-                      src={trash}
-                      onClick={() => handleDelete(usuario.id)}
+    <Main>
+      <TopBackGroundDefault />
+      <Container>
+        <Titulo>Listagem de Usuário</Titulo>
+        <ContainerLista>
+          {carregando ? (
+            <p>Carregando usuários...</p>
+          ) : usuario.length === 0 ? (
+            <p>Nenhum usuário cadastrado.</p>
+          ) : (
+            <Lista>
+              {usuario.map((usuario) => (
+                <ListaItem key={usuario.id}>
+                  <DivImagem>
+                    <Avatar
+                      src={`https://avatar.iran.liara.run/public/?username=${usuario.id}`}
                     />
-                  </ListaItem>
-                ))}
-              </Lista>
-            )}
-          </ContainerLista>
+                  </DivImagem>
+                  <ContainerDescricao>
+                    <h2>{usuario.name}</h2>
+                    <p>{usuario.email}</p>
+                    <p>{usuario.age}</p>
+                  </ContainerDescricao>
+                  <Trash src={trash} onClick={() => handleDelete(usuario.id)} />
+                </ListaItem>
+              ))}
+            </Lista>
+          )}
+        </ContainerLista>
 
-          <ButtonDefault
-            type="button"
-            style={{ width: "30%" }}
-            onClick={() => navigate("/")}
-          >
-            Voltar
-          </ButtonDefault>
-        </Container>
-      </Main>
-    </>
+        <ButtonDefault
+          type="button"
+          style={{ maxWidth: "40%" }}
+          onClick={() => navigate("/")}
+        >
+          Voltar
+        </ButtonDefault>
+      </Container>
+    </Main>
   );
 }
 
