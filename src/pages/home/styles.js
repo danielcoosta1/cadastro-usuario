@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Main = styled.main`
-  background-color: #181f36;
+
 
   height: 100vh;
   width: 100vw;
